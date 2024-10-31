@@ -1,0 +1,58 @@
+.Vetores
+.baseado em dd16 cap6
+.Motivação: armazenar de forma simples os conjuntos homogeneos de dados 
+.Vetor:grupo de elementos via indices e o inicial é sempre 0.
+./**/
+int v[5];   //inicio
+v[0]=2;     // *(v+ 0*sizeaf(int))=2
+v[1]=4;     // *(v+ 1*sizeaf(int))=4
+v[2]=7;     // *(v+ 2*sizeaf(int))=7
+v[3]=8;     // *(v+ 3*sizeaf(int))=8
+v[4]=11;    // *(v+ 4*sizeaf(int))=11
+//v[5]=13; segmentação fault
+
+/*
+1) faça um programa que leia as respostas(de 1 a 5) de n=1000 pessoas e, em seguida, imprima o histograma utilizando caractere'*' para desenhar as colunas horizontais.
+
+2) faça um programa que leia uma sequencia de n=1000 numeros inteiros e, em seguida imprima os valores na ordem inversa
+*/
+
+1)
+#include <stdio.h>
+int main(void){
+    int n,v[1000];
+    scanf("%d",&n);
+    for (int i=0 ; i<1000; i++){
+        scanf("%d",&v[i]);
+    }
+    int c[5];
+    for (int i=1; i<=5;i++){c[i-1]=o;}//limpando 
+    for (int i=i; i<=1000; i++){c[v[i-1]]+=1;} // contando
+    for (int i=1; i<=5; i++){ //imprimir histograma 
+        printf("%d": ,i);
+        for (int j=1; j<=  ;j++){ //c[i-1] vezes
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+2
+#include <stdio.h>
+
+int main(void) {
+    int v[1000]; // Vetor para armazenar os números
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &v[i]);
+    }
+
+    
+    for (int i = 999 ; i >= 0; i--) {
+        printf("%d ", v[i]);
+    }
+
+    printf("\n"); 
+    return 0;
+}

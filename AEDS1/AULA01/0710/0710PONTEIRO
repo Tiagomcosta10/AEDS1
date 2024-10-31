@@ -1,0 +1,89 @@
+Apontadores
+.baseado em [DD16.CAP.7]
+.Motivação: na passagem por valor, por vezes, temos de copiar grandes volumes de dados, o que é ineficiente 
+.Ponteiro : variavel que guarda um endereço de memoria
+.ex: int *pi;double*pd;void*pv;
+.Uma variavel referencia diretamente um valor; já um ponteiro indiretamente 
+
+colocar imagem
+AULA01/aeds0710.jpg
+
+.O operador&a retornar o endereço da variavel a, enquanto *(&a) retorna o valor existente no endereço de a 
+.O operador * na definição se aplica somente à variavel associada.
+
+.ERRADO!          / CERTO
+ int *p1,p2       / int *p1,*p2;
+                  /
+    
+.Um argumento de uma função pode ser passada por valor ou por referencia (i.e:ponteiros)
+int cubo val(int x){
+    return x*x*x;
+}
+void cubRef(int*px){
+    (*px)=(*px)*(*px)*(*px);
+}
+//no main
+int a=2,b;
+b= cuboVal(a);
+cuboRef(&a); 
+
+0xf00/         /a
+0xf04/          /b
+0xf0c/
+0xf10/          /px cuboRef
+0xf14/          /x   cuboVal
+
+. sizeaf retornar o número de bytes do arguemento
+.sizeaf(int) são 4 bytes; sizeaf(double) são 8 bytes, syzeaf(int*) são 4 bytes
+. pode-se realizar operações aritmedicas em ponteiros 
+.ptr++<-->ptr=ptr+sizeaf(*ptr)
+.(*ptr)<-->(*ptr)=(*ptr)+1;
+
+.A variavel null aponta para "nada" ou possui valor 0, e é usada para fins de segurança
+.int*ptr=null;
+
+O código que você escreveu implementa uma divisão inteira utilizando um processo recursivo. 
+#include <stdio.h>
+
+int divisao(int x, int y, int *resto) {
+    // Caso base: quando x é menor que y, significa que não podemos mais subtrair.
+    if (x < y) {
+        // Se o usuário passou um ponteiro de resto, atribuímos o valor de x (que é o resto).
+        if (resto != NULL) {
+            *resto = x;
+        }
+        return 0;
+    }
+
+    // Chamada recursiva, subtraindo y de x e somando 1 ao quociente.
+    return 1 + divisao(x - y, y, resto);
+}
+
+int main() {
+    int x, y, quociente, resto;
+    printf("Digite o valor de x (dividendo): ");
+    scanf("%d", &x);
+    printf("Digite o valor de y (divisor): ");
+    scanf("%d", &y);
+
+    // Inicialmente o resto será armazenado.
+    quociente = divisao(x, y, &resto);
+
+    printf("Quociente: %d\n", quociente);
+    printf("Resto: %d\n", resto);
+
+    return 0;
+}
+
+exercicio: faça uma funçaõ que lê n números inteiros e retorne o maior, o menor e, caso o usuario deseje a média dos valores.
+ voidminamax(int*min,int*max,int*med,int n){
+    int acc=0,v
+    for(int i=;i<=n;i++)
+    scanf("%d, &v")
+    if(==i)(*max)=(*min)=v;
+    if((*max)<v)(*max)=v;
+    if((*min))>v)(*min)=v;
+    acc+=v;
+ }
+ if(med!=NULL)(*med)=acc/(float)n;
+ }

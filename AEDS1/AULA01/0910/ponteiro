@@ -1,0 +1,92 @@
+correção das atividades da aula passada
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(void){
+    FILE*fp=NULL;
+    fp=fopen("/docs/registro.txt","r");
+    if(fp!=NULL){
+        int ra,na;
+        fscanf(fp,"%d,%*c%d",&ra,&na);
+        printf("R.A:%d e nota:%d\n",ra,na);
+    }
+    return 0;
+}
+//////////////
+
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(void){
+    FILE*fp=NULL;
+    fp=fopen("/docs/registro.txt","w");
+    if(fp!=NULL){
+         int ra,na;
+        scanf("%d,%*c%d",&ra,&na);
+        fprint("fp,%d %d\n", ra, na);
+        fclose(fp);
+    }
+    return 0;
+}
+
+////////////////
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(void){
+    FILE*fp=NULL;
+    fp=fopen("/docs/registro.txt","r");
+    if(fp!=NULL){
+        int ra,na, nota, med=0;
+        scanf("%d,&n");
+        for(int i=1; i<=n; i++){
+            fscanf("%d%*c%d",&ra,&nota);
+            acc+=nota;
+        }
+        printf("media:%.2f\n",acc/(float)n);
+        fclose(fp);
+    }
+    return 0;
+}
+
+    //contar a quantidade de alunos x>=60, 45<=x, x<45
+    //RA N1 N2 N3 N4 N5
+    #include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    FILE *fp = NULL;
+    fp = fopen("/docs/registro.txt", "r");
+    if (fp != NULL) {
+        int ra, n1, n2, n3, n4, n5;
+        int aprovados = 0, recuperacao = 0, reprovados = 0;
+
+        while (fscanf(fp, "%d %d %d %d %d %d", &ra, &n1, &n2, &n3, &n4, &n5) == 6) {
+            float media = (n1 + n2 + n3 + n4 + n5) / 5.0;
+
+            if (media >= 60) {
+                aprovados++;
+            } else if (media >= 45) {
+                recuperacao++;
+            } else {
+                reprovados++;
+            }
+        }
+
+        printf("Quantidade de alunos aprovados (media >= 60): %d\n", aprovados);
+        printf("Quantidade de alunos em recuperacao (45 <= media < 60): %d\n", recuperacao);
+        printf("Quantidade de alunos reprovados (media < 45): %d\n", reprovados);
+
+        fclose(fp);
+    } else {
+        printf("Erro ao abrir o arquivo.\n");
+    }
+
+    return 0;
+}
+
+
+
