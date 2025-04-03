@@ -1,0 +1,79 @@
+/*faça uma função que receba duas matries nxn e retorne a soma delas*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int** soma(int** a, int** b, int n) {
+    // Alocação dinâmica da matriz c
+    int** c = malloc(n * sizeof(int*));
+    for (int i = 0; i < n; i++) {
+        c[i] = malloc(n * sizeof(int));
+    }
+    
+    // Realiza a soma elemento a elemento
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    return c;  // Retorna a matriz resultante da soma
+}
+
+
+
+/*fora uma função recursiva que imprima os elementos de uma matriz n x m utilizando um único indice i*/
+#include <stdio.h>
+
+void imprimir(int** mat, int n, int m, int i) {
+    if (i < n * m) {
+        int l = i / m; // Calcula a linha
+        int c = i % m; // Calcula a coluna
+
+        // Imprime o elemento atual
+        printf("%d ", mat[l][c]);
+
+        // Chamada recursiva para o próximo elemento
+        imprimir(mat, n, m, i + 1);
+    }
+}
+
+
+/*faça uma função que calcule a multiplicação de uma matriz a x b x por uma matriz bxcy */
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função para multiplicar duas matrizes
+int** mult(int** A, int** B, int a, int b, int c) {
+    // Aloca memória para a matriz resultado C
+    int** C = malloc(a * sizeof(int*));
+    for (int l = 0; l < a; l++) {
+        C[l] = malloc(c * sizeof(int));
+    }
+
+    // Inicializa a matriz resultado com 0
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < c; j++) {
+            C[i][j] = 0;
+        }
+    }
+
+    // Realiza a multiplicação das matrizes
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < c; j++) {
+            for (int k = 0; k < b; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    return C;
+}
+
+
+    
+
+
+/*faça uma função que calcule a determinante de uma matriz nxn*/
+int det(int**A,int n){
+
+}

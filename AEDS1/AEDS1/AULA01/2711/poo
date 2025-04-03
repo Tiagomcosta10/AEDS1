@@ -1,0 +1,88 @@
+virtual void 
+
+
+int divisao (int a, int b){return a/b;}
+float divisao (float a, float b){return a/b;}
+float divisao (int a, int b){return a/b;}
+int divisao (float a, float b){return a/b;}
+
+
+
+int main (void){
+    if(divisao(5.0,3.0)/divisao(2.0,1.0)==divisao(3.0,1.0))
+
+}
+se o nomeda função mais os parametro forem iguais da errado
+
+#include <iostream>
+
+class Forma {
+protected:
+    float lar, alt;
+public:
+    Forma(float l, float a) : lar(l), alt(a) {}
+    virtual float area() const { return -1; }
+    virtual ~Forma() {} // Destrutor virtual
+};
+
+class Retangulo : public Forma {
+public:
+    Retangulo(float l, float a) : Forma() {
+        lar=l; alt=a;
+    }
+~retangulo():forma(){}
+float area(){return lar*alt;}
+    
+};
+
+class Triangulo : public Forma {
+public:
+    Triangulo(float l, float a) : Forma() {
+          lar=l; alt=a;
+    }
+    ~Triangulo : ~Forma{}
+      float area(){return (lar * alt) / 2.0;}  
+
+};
+
+class Elipse : public Forma {
+public:
+    Elipse(float l, float a) : Forma() {}
+     lar=l; alt=a;
+     }
+   ~Elipse : ~Forma(){}
+    float area(){   return 3.14 * (lar / 2) * (alt / 2);}
+};
+
+int main(void) {
+    float l, a;
+    std::cin >> l >> a;
+
+    Forma* f;
+
+    Retangulo r(l, a);
+    f = &r;
+    std::cout << "Area Retangulo: " << f->area() << std::endl;
+
+    Triangulo t(l, a);
+    f = &t;
+    std::cout << "Area Triangulo: " << f->area() << std::endl;
+
+    Elipse e(l, a);
+    f = &e;
+    std::cout << "Area Elipse: " << f->area() << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+jeito mais simples 
+
+forma(float l, float a ){
+    lar=l;alt=a;
+}
+retangulo(float l, float a);
+forma(l,a){}

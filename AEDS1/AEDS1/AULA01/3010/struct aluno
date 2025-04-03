@@ -1,0 +1,77 @@
+struct aluno{
+    int idade;
+    float mensalidade;
+    char genero;
+    int cep;
+    int periodo;
+}
+int main(void){
+    struct aluno a;
+    scanf("%d %f %c %d %d",&(a.idade),&(a.mensalidade),&(a.genero),(a.cep),&(periodo));
+    printf("A idade é : %d\n", a.idade);
+
+    return 0;
+
+}
+
+
+
+
+#include <stdio.h>
+
+union numero {
+    int i;
+    float f;
+};
+
+int main (void) {
+    union numero n1, n2;
+    char opcao;
+    
+    printf("Escolha uma opção ('i' para int, 'f' para float): ");
+    scanf("%c%*c", &opcao);
+
+    if (opcao == 'i') {
+        printf("Digite um inteiro: ");
+        scanf("%d", &n1.i);
+        printf("Você digitou o inteiro: %d\n", n1.i);
+    } else  (opcao == 'f') {
+        printf("Digite um float: ");
+        scanf("%f", &n1.f);
+        printf("Você digitou o float: %f\n", n1.f);
+    }
+    return 0;
+}
+
+
+
+
+
+enum tipo{INTEIRO,DECIMAL}
+#include <stdio.h>
+
+union numero {
+    int i;
+    float f;
+};
+enum tipo{INTEIRO,DECIMAL}
+
+int main (void) {
+    union numero n1, n2;
+    char opcao;
+
+    printf("Escolha uma opção ('i' para int, 'f' para float): ");
+    scanf("%c%*c", &opcao);
+    enum qual = opcao== 'i'? INTEIRO;DECIMAL;
+
+    if (opcao ==INTEIRO) {
+        printf("Digite um inteiro: ");
+        scanf("%d", &n1.i);
+        printf("Você digitou o inteiro: %d\n", n1.i);
+    } else  (opcao == 'f') {
+        printf("Digite um float: ");
+        scanf("%f", &n1.f);
+        printf("Você digitou o float: %f\n", n1.f);
+    }
+    return 0;
+}

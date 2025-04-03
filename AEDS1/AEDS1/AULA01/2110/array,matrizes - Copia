@@ -1,0 +1,97 @@
+faça um programa que leia 1000 numeros e ordene de tal forma que os zeros fiquem no fim da sequencia e os demais mantenham a ordem de oparição
+//1205003  -->125300
+2 refaça (1) mas a ordem inversa de aparição 
+
+
+1. 
+#include <stdio.h>
+
+int main(void) {
+    int v[1000], z = 0;  
+
+    for (int i = 0; i < 1000; i++) {
+        scanf("%d", &(v[i]));
+        if (v[i] == 0) {
+            z++;
+        } else {
+            printf("%d ", v[i]);
+        }
+    }
+
+    for (; z > 0; z--) {
+        printf("0 ");
+    }
+
+    printf("\n");
+    return 0; 
+}
+
+
+
+    2. 
+  #include <stdio.h>
+
+int main(void) {
+    int v[1000], z = 0;  
+
+    for (int i = 0; i < 1000; i++) {
+        scanf("%d", &(v[i]));
+        if (v[i] == 0) {
+            z++;
+        } else {
+            printf("%d ", v[i]);
+        }
+    }
+
+    for (; z > 0; z--) {
+        printf("0 ");
+    }
+
+    printf("\n");
+    return 0; 
+}
+
+
+Matrizes
+1. Sabendo que uma sala possui 60 alunos e cada um possui 20 notas de atividade de  valor 5, calcule a média de cada aluno
+ #include <stdio.h>
+
+    int main(void){
+        int t[60][20];
+        float media[60];
+    
+    for (int a=0; a<60;a++){
+        media[a]=0.0
+
+    for (int n=0;  n<20; n++){
+        scanf("%d",&(t[a][n]))
+        media[a]+=+[a][n]/20.0
+    }
+    }
+    
+    for (int a =0;a<60;a++){
+        printf("[%d]:%d\n",a,media[a]);
+    }
+    return 0;
+    }
+
+2. refaça (3), mas calcule a média da turma para cada atividade
+ #include <stdio.h>
+
+
+    int main(void){
+        int t[60][20];
+        float media[20];
+    
+    for (int a=0; a<60;a++)
+    for (int n=0;  n<20; n++)
+        scanf("%d",&(t[a][n]));
+    for (int n =0;n<20;n++){
+        m[n]=0.0;
+        for(int a=a; a<60; a++)
+        m[n]+=+[a][n]/60.0;
+        printf("[%d]:%f\n",m,[n]);
+    }
+    return 0;
+    }
+

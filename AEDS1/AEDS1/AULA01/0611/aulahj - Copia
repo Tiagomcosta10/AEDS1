@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main (void){
+    char*nome;
+    nome= malloc(sizeof(char)*(10+1));
+    nome[10]='\0';//fim da string
+    scanf("%10s", nome);
+    printf("seu nome é: %s\n", nome);
+    return 0;
+}
+//modificar caractere
+
+int main (void){
+    char s[10]= "Felipe";
+    S[0]='p'; //errado
+    sscanf(s,"%s","julia");//certo
+printf("seu nome é %s\n");
+return 0;
+}
+//muda mais geral
+
+1. faça um código em c que conte a quantidade da vogal de uma string de, no máximo, 1024 letras maiusculas passagem por referencia
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main (void){
+    char *vogais;
+    vogais=malloc(sizeof(char)*(1024+1));
+    vogais[1024]='\0'
+
+for (int i = 0; i < strlen(s); i++) {
+        // Verifica se o caractere atual é uma vogal
+        if (s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U') {
+            count++;
+
+2. faça um código que verifique se uma strinf de no maximo 1024 letras minusculas é polidroma  recursivo
+
+
+
+3. faça um código que leia uma string de 1024 caracteres e outra de 64, e verifique se a última consta na primeira recursivi
+
+
+
+4. faça um código que leia uma matriz nxn de caracteres e conte o número de vezes que uma letra qualqur aperece em cada linha, coluna e diagonal na matriz passagem por referencia
+
+
+
+
+5. faça um código que leia uma string de, no máximo, 1024 letras e troque as letras maiusculas por minusculas e vice versa recursivo
+int main (void){
+    char* s=malloc(sizeof(char)*1025);
+    scanf("%1024s",s);
+    int tam=0;//quant de chars
+    int i = 0;
+    while(s[i]!='\0'){tam++; i++;}//tam de s
+for(i=0;i<tam;i++){//trocar os chars
+    if(s[i]>='a' && s[i<='z']){ //minuscula
+    s[i]-=32; //ir pra maiuscula
+
+    }else{//maiuscula
+    s[i]+=32;//ir pra minuscula
+    
+
+
+    }
+
+}
+printf("%s\n",s);
+free(s);
+return 0;
+}
+
+listaa
+laboratorio exercicios
+analise de código (dica escrever as variaveis do lado)
+vetor(te dou um vetor e te dou uma posição qualquer, calcule pra mim a mulriplicação da dos numeros da direita e da esquerda, multiplique o que esta a esuqerda e a direita)
+matriz, fazer palavra cruzada cima baixo esquerda direita diagonal e tals 
+campo minado mina 0 9 usando matriz 
+vetor rotacionar para algum sentido e quero rotacionar um pra direita 
+vetor media desvio pasrão 
+multiplicação de matriz 
+soma de matriz e rotacionar 
+calcular determinante 
+opração de ponteiro
+arquivo leia um arquivo ou escreva
+manipular struct 
+recursiva
+
